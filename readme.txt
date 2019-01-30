@@ -1,4 +1,5 @@
-A versão deste manual introduz novas funcionalidades ao shopify:
+A versÃ£o deste manual introduz novas funcionalidades ao shopify:
 
-1 - Permite a utilização de callback para marcar as encomendas como pagas assim que a referência é paga.
-2 - Permite o uso de Gift Cards como pagamento parcial da encomenda gerando apenas a referência do valor a pagar no multibanco (na versão anterior gerava do total da encomenda).
+1 - Permite a utilizaÃ§Ã£o de callback para marcar as encomendas como pagas assim que a referÃªncia Ã© paga.
+2 - Permite o uso de Gift Cards como pagamento parcial da encomenda gerando apenas a referÃªncia do valor a pagar no multibanco (na versÃ£o anterior gerava do total da encomenda).
+3 - InstruÃ§Ãµes de configuraÃ§Ã£o pagamentos MB WAY.
