@@ -1,0 +1,35 @@
+<!-- ##### begin checkout config MB WAY ##### -->
+
+{% assign metodo_pagamento = order.gateway | upcase %}
+{% if metodo_pagamento == "MB WAY" or metodo_pagamento =="GIFT_CARD, MB WAY%}
+{% for transaction in transactions %}
+	{% assign gateway_mb = transaction.gateway | upcase %}
+	{% if gateway_mb == "MB WAY" %}
+		{% assign valor_mb = transaction.amount  %} 
+	{% endif %}
+{% endfor %}
+<br/>
+<br/>
+
+<table style="border: 1px solid #D60510; font-family:Arial; padding: 0px; border-collapse: collapse; width: 320px; height: 150px">
+        <tr>
+            <td colspan="2" style="border-bottom: 1px solid #D60510; padding: 10px 0px; font-size: small; text-align:center; background: #D60510; color:white;">Pagamento MBWAY</td>
+        </tr>
+        <tr>
+            <td style="padding: 25px 0px;">
+                <img src="https://ifthenpay.com/img/mbway.png" style="margin-left: 5px;" />
+            </td>
+            <td>
+                <img src="https://ifthenpay.com/shopify/MBWAYPayment.ashx?mbwaykey=[MBWAYKEY]&telemovel={{billing_address.phone}}&email={{order.custom.email}}&order_id={{order_number}}&order_total={{total_price | money_without_currency}}" style="margin-right: 5px;" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="font-size: x-small; padding:5px 2px; border: 0px; text-align:center;">Por favor verifique a notificação na sua App MBWAY e proceda ao pagamento da sua encomenda.</td>
+        </tr>
+    </table>
+
+<br/>
+<br/>
+{% endif %}
+
+<!-- ##### ifthenpay checkout config MB WAY ##### -->
