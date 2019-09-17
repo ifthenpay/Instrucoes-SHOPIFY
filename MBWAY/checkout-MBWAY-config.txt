@@ -32,4 +32,4 @@
 <br/>
 {% endif %}
 
-<!-- ##### ifthenpay checkout config MB WAY ##### -->
+<!-- ##### end checkout config MB WAY ##### -->
