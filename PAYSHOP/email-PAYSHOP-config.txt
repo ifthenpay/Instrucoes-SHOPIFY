@@ -1,7 +1,7 @@
 <!-- ##### begin Payshop email template config ##### -->
 
 {% assign metodo_pagamento = gateway | upcase %}
-{% if metodo_pagamento == "PAYSHOP" or metodo_pagamento =="GIFT_CARD, PAYSHOP" %}
+{% if metodo_pagamento contains "PAYSHOP" %}
 
 <!-- ##### gerar apenas valor multibanco  ##### -->
 {% for transaction in transactions %}

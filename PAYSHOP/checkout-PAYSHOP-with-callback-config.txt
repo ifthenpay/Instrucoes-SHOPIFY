@@ -1,7 +1,7 @@
 <!-- ##### begin checkout with callback config PAYSHOP ##### -->
 
 {% assign metodo_pagamento = order.gateway | upcase %}
-{% if metodo_pagamento == "PAYSHOP" or metodo_pagamento =="GIFT_CARD, PAYSHOP%}
+{% if metodo_pagamento contains "PAYSHOP" %}
 {% for transaction in transactions %}
 	{% assign gateway_mb = transaction.gateway | upcase %}
 	{% if gateway_mb == "PAYSHOP" %}
