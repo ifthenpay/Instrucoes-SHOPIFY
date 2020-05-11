@@ -1,7 +1,7 @@
 <!-- ##### begin ifthenpay checkout config ##### -->
 
 {% assign metodo_pagamento = order.gateway | upcase %}
-{% if metodo_pagamento == "MULTIBANCO" or metodo_pagamento =="GIFT_CARD, MULTIBANCO" %}
+{% if metodo_pagamento contains "MULTIBANCO" %}
 
 <!--Apenas gera o valor pago por multibanco (ex. gift card ou descontos)-->
 {% for transaction in transactions %}

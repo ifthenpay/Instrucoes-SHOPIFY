@@ -1,7 +1,7 @@
 <!-- ##### begin ifthenpay checkout with callback config ##### -->
 
 {% assign metodo_pagamento = order.gateway | upcase %}
-{% if metodo_pagamento == "MULTIBANCO" or metodo_pagamento =="GIFT_CARD, MULTIBANCO" %}
+{% if metodo_pagamento contains "MULTIBANCO" %}
 {% for transaction in transactions %}
 	{% assign gateway_mb = transaction.gateway | upcase %}
 	{% if gateway_mb == "MULTIBANCO" %}

@@ -1,7 +1,7 @@
 <!-- ##### begin ifthenpay email template config ##### -->
 
 {% assign metodo_pagamento = gateway | upcase %}
-{% if metodo_pagamento == "MULTIBANCO" or metodo_pagamento =="GIFT_CARD, MULTIBANCO" %}
+{% if metodo_pagamento contains "MULTIBANCO" %}
 
 <!-- ##### gerar apenas valor multibanco  ##### -->
 {% for transaction in transactions %}
