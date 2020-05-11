@@ -1,7 +1,7 @@
 <!-- ##### begin checkout config MB WAY ##### -->
 
 {% assign metodo_pagamento = order.gateway | upcase %}
-{% if metodo_pagamento == "MB WAY" or metodo_pagamento =="GIFT_CARD, MB WAY%}
+{% if metodo_pagamento contains "MB WAY"%}
 {% for transaction in transactions %}
 	{% assign gateway_mb = transaction.gateway | upcase %}
 	{% if gateway_mb == "MB WAY" %}

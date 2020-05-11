@@ -11,7 +11,7 @@ Nota: Se optar por este método de pagamento deverá estar registado com o seu núm
 
 - Nas instruções do pagamento colocar o seguinte texto (recomendado):
 
-"Por favor confirme na aplicação MB WAY o pagamento enviado."
+"Por favor confirme na sua aplicação MB WAY a autorização do pagamento."
 
 2 - Configurar as definições de Chechout (Settings/Checkout)
 
