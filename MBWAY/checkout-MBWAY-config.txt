@@ -5,7 +5,7 @@
 {% for transaction in transactions %}
 	{% assign gateway_mb = transaction.gateway | upcase %}
 	{% if gateway_mb == "MB WAY" %}
-		{% assign valor_mb = transaction.amount  %} 
+		{% assign valor_mbw = transaction.amount  %} 
 	{% endif %}
 {% endfor %}
 <br/>
@@ -20,11 +20,11 @@
                 <img src="https://ifthenpay.com/img/mbway.png" style="margin-left: 5px;" />
             </td>
             <td>
-                <img src="https://ifthenpay.com/shopify/MBWAYPayment.ashx?mbwaykey=[MBWAYKEY]&telemovel={{billing_address.phone}}&email={{order.custom.email}}&order_id={{order_number}}&order_total={{total_price | money_without_currency}}&id={{order_id}}" style="margin-right: 5px;" />
+                <img src="https://ifthenpay.com/shopify/MBWAYPayment.ashx?mbwaykey=[MBWAYKEY]&telemovel={{billing_address.phone}}&email={{order.custom.email}}&order_id={{order_number}}&order_total={{valor_mbw | money_without_currency}}&id={{order_id}}" style="margin-right: 5px;" />
             </td>
         </tr>
         <tr>
-            <td colspan="2" style="font-size: x-small; padding:5px 2px; border: 0px; text-align:center;">Por favor verifique a notificação na sua App MBWAY e proceda ao pagamento da sua encomenda.</td>
+            <td colspan="2" style="font-size: x-small; padding:5px 2px; border: 0px; text-align:center;">Por favor verifique a notificaÃ§Ã£o na sua App MBWAY e proceda ao pagamento da sua encomenda.</td>
         </tr>
     </table>
 
