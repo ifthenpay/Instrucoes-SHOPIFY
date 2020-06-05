@@ -1,15 +1,8 @@
 <!-- ##### begin checkout config PAYSHOP ##### -->
-
 {% assign metodo_pagamento = order.gateway | upcase %}
 {% if metodo_pagamento contains "PAYSHOP" %}
-{% for transaction in transactions %}
-	{% assign gateway_mb = transaction.gateway | upcase %}
-	{% if gateway_mb == "PAYSHOP" %}
-		{% assign valor_ps = transaction.amount  %} 
-	{% endif %}
-{% endfor %}
 <br/>
-<p><img src="https://ifthenpay.com/shopify/payshop.ashx?payshopkey=[PAYSHOPKEY]&order_id={{order_number}}&valor={{valor_ps | money_without_currency}}&validade=[DIAS]"/></p>
+<p><img src="https://ifthenpay.com/shopify/payshop.ashx?payshopkey=[PAYSHOPKEY]&order_id={{order_number}}&valor={{total_price | minus:gift_cards_amount | money_without_currency}}&validade=[DIAS]&id={{order_id}}"/></p>
 <br/>
 {% endif %}
 

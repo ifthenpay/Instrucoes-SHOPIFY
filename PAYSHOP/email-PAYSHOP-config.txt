@@ -1,20 +1,10 @@
 <!-- ##### begin Payshop email template config ##### -->
-
-{% assign metodo_pagamento = gateway | upcase %}
+{% assign metodo_pagamento = order.gateway | upcase %}
 {% if metodo_pagamento contains "PAYSHOP" %}
-
-<!-- ##### gerar apenas valor multibanco  ##### -->
-{% for transaction in transactions %}
-	{% assign gateway_mb = transaction.gateway | upcase %}
-	{% if gateway_mb == "PAYSHOP" %}
-		{% assign valor_ps = transaction.amount  %} 
-	{% endif %}
-{% endfor %}
-
 <div>
 <h3>Dados de pagamento</h3>
 <p>
-<img src="https://ifthenpay.com/shopify/payshop.ashx?payshopkey=[PAYSHOPKEY]&order_id={{order_number}}&valor={{valor_ps | money_without_currency}}"/>
+<img src="https://ifthenpay.com/shopify/payshop.ashx?payshopkey=[PAYSHOPKEY]&order_id={{order_number}}&valor={{total_price | minus:gift_cards_amount | money_without_currency}}"/>
 </p>
 </div>
 
