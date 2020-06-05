@@ -1,4 +1,6 @@
 <!-- ##### begin ifthenpay email template config ##### -->
+{% assign metodo_pagamento = order.gateway | upcase %}
+{% if metodo_pagamento contains "MULTIBANCO" %}
 <div>
 <h3>Dados de pagamento</h3>
 

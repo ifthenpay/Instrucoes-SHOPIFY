@@ -1,4 +1,6 @@
 <!-- ##### begin ifthenpay checkout with callback config ##### -->
+{% assign metodo_pagamento = order.gateway | upcase %}
+{% if metodo_pagamento contains "MULTIBANCO" %}
 <br/>
 <br/>
 <table style="border: 1px solid #2196F3; color: white; padding: 0px; border-collapse: collapse; width: 320px; height: 150px">
