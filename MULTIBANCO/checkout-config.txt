@@ -1,16 +1,4 @@
 <!-- ##### begin ifthenpay checkout config ##### -->
-
-{% assign metodo_pagamento = order.gateway | upcase %}
-{% if metodo_pagamento contains "MULTIBANCO" %}
-
-<!--Apenas gera o valor pago por multibanco (ex. gift card ou descontos)-->
-{% for transaction in transactions %}
-	{% assign gateway_mb = transaction.gateway | upcase %}
-	{% if gateway_mb == "MULTIBANCO" %}
-		{% assign valor_mb = transaction.amount  %} 
-	{% endif %}
-{% endfor %}
-
 <br/>
 <br/>    
 <table style="border: 1px solid #2196F3; color: white; padding: 0px; border-collapse: collapse; width: 320px; height: 150px">
@@ -19,7 +7,7 @@
 			<img src="https://ifthenpay.com/mb.png" style="margin-left: 10px;"/>
 		</td>
 		<td>
-			<img src="https://ifthenpay.com/shopify/generateRef.ashx?entidade=[ENTIDADE]&subentidade=[SUBENTIDADE]&order_id={{order_number}}&order_total={{valor_mb | money_without_currency}}" style="margin-right: 10px;" />
+			<img src="https://ifthenpay.com/shopify/generateRef.ashx?entidade=[ENTIDADE]&subentidade=[SUBENTIDADE]&order_id={{order_number}}&order_total={{total_price | minus:gift_cards_amount | money_without_currency}}" style="margin-right: 10px;" />
 		</td>
 	</tr>
 </table>
