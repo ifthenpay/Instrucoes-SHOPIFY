@@ -1,4 +1,6 @@
 <!-- ##### begin checkout config MB WAY ##### -->
+{% assign metodo_pagamento = order.gateway | upcase %}
+{% if metodo_pagamento contains "MB WAY"%}
 <br/>
 <br/>
 <table style="border: 1px solid #D60510; font-family:Arial; padding: 0px; border-collapse: collapse; width: 320px; height: 150px">
