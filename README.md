@@ -1,2 +1,2 @@
 # Instrucoes-SHOPIFY
-Instruções para a plataforma SHOPIFY
+Instruções para a integração dos métodos da Ifthenpay na plataforma SHOPIFY.
