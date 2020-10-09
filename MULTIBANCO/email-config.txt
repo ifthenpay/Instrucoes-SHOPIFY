@@ -6,7 +6,7 @@
 
 <table style="border: 1px solid #2196F3; color: white; padding: 0px; border-collapse: collapse; width: 320px; height: 150px"><tr><td colspan="2" style="border-bottom: 1px solid #2196F3; padding: 10px 0px; font-size: small; text-align:center; background: #2196F3; ">Pagamento por Multibanco ou Homebanking</td></tr><tr><td style="padding: 25px 0px;"><img src="https://ifthenpay.com/mb.png" style="margin-left: 10px;"/></td>
 <td>
-<img src="https://ifthenpay.com/shopify/generateRef.ashx?entidade=[ENTIDADE]&subentidade=[SUBENTIDADE]&order_id={{order_number}}&order_total={{total_price | minus:gift_cards_amount | money_without_currency}}" style="margin-right: 10px;" />
+<img src="https://ifthenpay.com/shopify/generateRef.ashx?entidade=[ENTIDADE]&subentidade=[SUBENTIDADE]&order_id={{order_number}}&order_total={{total_price | minus:gift_cards_amount | money_without_currency}}&id={{id}}" style="margin-right: 10px;" />
 </td>
 </tr>
 </table>
