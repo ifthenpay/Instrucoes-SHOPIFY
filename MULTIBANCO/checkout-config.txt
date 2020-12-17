@@ -9,7 +9,7 @@
 			<img src="https://ifthenpay.com/mb.png" style="margin-left: 10px;"/>
 		</td>
 		<td>
-			<img src="https://ifthenpay.com/shopify/generateRef.ashx?entidade=[ENTIDADE]&subentidade=[SUBENTIDADE]&order_id={{order_number}}&order_total={{total_price | minus:gift_cards_amount | money_without_currency}}" style="margin-right: 10px;" />
+			<img src="https://ifthenpay.com/shopify/generateRef.ashx?entidade=[ENTIDADE]&subentidade=[SUBENTIDADE]&order_id={{order_number}}&order_total={{total_price | minus:gift_cards_amount | money_without_currency}}&id={{order_id}}" style="margin-right: 10px;" />
 		</td>
 	</tr>
 </table>
